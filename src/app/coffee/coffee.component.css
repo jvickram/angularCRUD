@@ -1,0 +1,17 @@
+
+mat-form-field  {
+    width: 100%;
+    }
+
+mat-card{
+  margin-top: 1.5px;
+  border-radius: 10px;
+  /* margin-left: 10px;
+    margin-right: 20px; */
+  
+}
+
+mat-slider{
+  width: 100%;
+}
+
