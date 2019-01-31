@@ -35,6 +35,8 @@ import { ListComponent } from './list/list.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatSnackBarModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 
   ],
   providers: [GeoLocationService, DataService],
